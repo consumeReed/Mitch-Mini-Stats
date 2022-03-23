@@ -3,6 +3,9 @@ Application to access Riot Games API for League of Legends statistics.
 
 # In development
 
+## Disclaimer
+Project will not work without a valid API key, current in is a testing key that may be invalid
+
 ## Project Overview
 Application in its current state uses a command line interface. Enter a League of Legends summoner name to get started.
 Currently capable of gathering Champion mastery progress for testing purposes.
