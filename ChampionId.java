@@ -10,7 +10,7 @@ public class ChampionId {
 		Map<String, String> champ = new HashMap<String, String>();
 		BufferedReader br = null;
 		try {
-			File f = new File("C:\\Users\\rmitc\\Desktop\\lol_id.txt");
+			File f = new File("lib\\lol_id.txt");
 			br = new BufferedReader(new FileReader(f));
 			String line = null;
 			while((line = br.readLine()) != null)
@@ -35,7 +35,7 @@ public class ChampionId {
 	public static void main(String[] args)
 	{
 		Map<String, String> p = getList();
-		System.out.print(p.get("420"));
+		System.out.print(p.get("1"));
 	}
 	
 }
