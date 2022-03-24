@@ -1,12 +1,28 @@
 package league;
-
 import java.io.*;
+
 import java.util.*;
+/**
+ * ChampionId
+ * 
+ * @author Reed Mitchell
+ * @date March 24 2022
+ * 
+ * ChampionId reads a file to gather the unique IDs
+ * of every League of Legends champion(playable characters)
+ *
+ */
 
 public class ChampionId {
 	
-	
-	public static Map<String, String> getList(){
+	/*
+	 * Associates champion names with their respected ID
+	 * 
+	 * @return 		Map containing champion ID as key and name as value
+	 */
+	public static Map<String, String> getList()
+	{
+		
 		Map<String, String> champ = new HashMap<String, String>();
 		BufferedReader br = null;
 		try {
@@ -27,11 +43,11 @@ public class ChampionId {
 			e.printStackTrace();
 		}
 		
-		
 		return champ;
 	
-
 	}
+	
+	//test method
 	public static void main(String[] args)
 	{
 		Map<String, String> p = getList();

@@ -6,22 +6,43 @@ import java.net.URL;
 import java.util.*;
 import java.io.BufferedReader;
 
+/**
+ * Summ
+ * 
+ * @author Reed Mitchell
+ * @date March 24 2022
+ * 
+ * Summ Class is used to create an instance of a League of Legends summoner.
+ * General information is pulled from the Riot Games API.
+ *
+ */
+
 public class Summ {
 	
-	static String key = "xxx";
-	static String urlA = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
-	static String urlB = "?api_key=";
-	static String summonerName;
-	static String name;
+	static String key = "xxx";	//API Key from Riot Games
 	
-	static HashMap<String, String> summoner = new HashMap<String, String>();
-	static List<String> basicData = new LinkedList<String>();
+	static String urlA = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"; 
+	static String urlB = "?api_key=";
+	//Pieces of a web url to access the API
+	
+	static String summonerName; 	//Summoner name with replaced characters
+	static String name;				//Summoner name
+	
+	static HashMap<String, String> summoner = new HashMap<String, String>();	//Stores summoner data
+	static List<String> basicData = new LinkedList<String>();					//Stores unformatted summoner data
 	
 	static String accountId;
 	static String puuid;
 	static String id;
 	static String profileIconId;
+	//IDs associated with each summoner
 	
+	/**
+	 * Constructor that accesses API using the given summoner name.
+	 * Parses the data on the web url and stores it
+	 * 
+	 * @param name		Summoner name to check
+	 */
 	public Summ(String name) {
 		summonerName = name.replace(" ", "%20");
 		this.name = name;
@@ -44,6 +65,12 @@ public class Summ {
 		profileIconId = summoner.get("profileIconId");
 	}
 	
+	/* Given a web url, it will read all information and store
+	 * the information in a formatted list
+	 *
+	 * @param webURL	web url to read data from
+	 * @return 			List with all information from url
+	 */
 	public static List<String> DownloadPage(String webURL) throws IOException {
     	
     	String[] split = null;
@@ -76,6 +103,7 @@ public class Summ {
         return splitLL;
 	}
 	
+	//test method
 	public static void main(String[] args) throws IOException {
     	Scanner sc = new Scanner(System.in);
         System.out.println("Enter a League Summoner Name: ");
