@@ -2,6 +2,7 @@
 Application to access Riot Games API for League of Legends statistics.
 
 # In development
+Slowly working while doing school work, testing basic UI elements currently
 
 ## Disclaimer
 Project will not work without a valid API key, current in is a testing key that may be invalid
