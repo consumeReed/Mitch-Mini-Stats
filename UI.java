@@ -33,6 +33,7 @@ public class UI extends Frame implements ActionListener{
 		setTitle("LOL Stats");
 		setLayout(new FlowLayout());
 		b1.addActionListener(this);
+		b2.addActionListener(this);
 	}
 	
 	public void actionPerformed(ActionEvent action)
@@ -56,9 +57,14 @@ public class UI extends Frame implements ActionListener{
 		
 		if(action.getSource()==b2)
 		{
-			System.exit(1);
+			CloseFrame();
 		}
 		
+	}
+	
+	public void CloseFrame()
+	{
+		super.dispose();
 	}
 	
 	public static void main(String[] args)
